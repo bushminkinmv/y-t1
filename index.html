@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/top_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/mdbuttons.css" />
+    <link rel="import" href="https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html">
+
+    <title>Онлайн-табло виртуального аэропорта</title>
+
+</head>
+<body>
+    <!-- + code -->
+    <div class="main-container">
+
+        <div class="top-container">
+            <div class="control-buttons">
+              <div class="control-buttons-arrival">
+                  <section>
+                      <div class="button raised grey">
+                        <div class="center icon-align" fit><img height="20px" src="img/land.png"></div>
+                        <paper-ripple fit></paper-ripple>
+                      </div>
+                  </section>
+              </div>
+              <div class="control-buttons-departure">
+                  <section>
+                      <div class="button raised grey">
+                        <div class="center icon-align" fit><img height="20px" src="img/takeoff.png"></div>
+                        <paper-ripple fit></paper-ripple>
+                      </div>
+                  </section>       
+              </div>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="section-arrival"></div>
+            <div class="section-departure"></div>
+
+            <div class="clear"></div>
+
+        </div>  
+
+        <div class="content-container">
+            <div class="arrival">
+                <table id="table" class="table table-hover table-mc-light-blue table-arrival">
+                  <thead>
+                    <tr>
+                      <th data-title="ID">Тип</th>
+                      <th data-title="Number">Номер рейса</th>
+                      <th data-title="Name">Авиакомпания</th>
+                      <th data-title="Logo">Логотип</th>
+                      <th data-title="Plane">Воздушное судно</th>
+                      <th data-title="Airport">Аэропорт назначения</th>
+                      <th data-title="Time">Время</th>
+                      <th data-title="Status">Статус</th>
+                      <th data-title="Info">Примечание</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="departure">
+                <table id="table" class="table table-hover table-mc-light-blue table-departure">
+                  <thead>
+                    <tr>
+                      <th data-title="ID">Тип</th>
+                      <th data-title="Number">Номер рейса</th>
+                      <th data-title="Name">Авиакомпания</th>
+                      <th data-title="Logo">Логотип</th>
+                      <th data-title="Plane">Воздушное судно</th>
+                      <th data-title="Airport">Аэропорт назначения</th>
+                      <th data-title="Time">Время</th>
+                      <th data-title="Status">Статус</th>
+                      <th data-title="Info">Примечание</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>    
+
+    
+
+        
+        <div class="footer">
+            Виртуальный Аэропорт © 2015
+        </div>
+
+    </div>
+
+    
+    <!-- - code -->
+	
+	<!-- + scripts -->
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/parser.js"></script>  
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/sticky.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+	<!-- - scripts -->
+</body>
+</html>

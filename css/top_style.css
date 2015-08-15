@@ -1,0 +1,61 @@
+.top-container {
+    background-color: #2196F3;
+    height: 75px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.icon-align {
+	padding: 6px;
+}
+
+.control-buttons {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.control-buttons-arrival {
+	float: left;
+}
+
+.control-buttons-departure {
+	float: left;
+}
+
+.head-arrival {
+    text-transform: uppercase;
+    color: #FAFAFA;
+    font-size: 30px;
+    text-align: center;
+}
+
+.head-departure {
+	text-transform: uppercase;
+    color: #FAFAFA;
+    font-size: 30px;
+    text-align: center;
+	display: none;
+}
+
+.section-arrival {
+    border-bottom: 2px solid #EEE;
+    width: 80px;
+    position: absolute;
+    left: 40px;
+    float: left;
+    display: none;
+}
+
+.section-departure {
+    border-bottom: 2px solid #EEE;
+    width: 80px;
+    position: absolute;
+    left: 140px;
+    float: left;
+    display: none;
+}

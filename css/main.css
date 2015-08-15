@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+
+/*html {
+	overflow-y: scroll;
+}
+
+html, body {
+	height: 100%;
+	background-color: #FAFAFA;
+}*/
+
+.clear {
+	clear: both;
+}
+
+.main-container {
+	height: 100%;
+	/*background-color: #FAFAFA;*/
+	font-family: Roboto;
+	margin: 100px 25px 25px 25px;
+	position: relative;
+}
+
+.c-align {
+	text-align: center !important;
+}
