@@ -1,7 +1,7 @@
 function reloadData()
 {
   $('#table tbody tr').remove();
-  var flights = $.getJSON("data.json");
+  var flights = $.getJSON("js/data.json");
   var showArrival = $(".active-chechboxa").length === 1;
   var showDeparture = $(".active-chechboxd").length === 1;
   flights.forEach(function(f) {
