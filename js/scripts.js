@@ -1,6 +1,12 @@
 $( window ).resize(function() {
 	var w = $(window).width();
-	if ( w < 850) {
+	if (w < 1050) {
+		$(".table").css("font-size", "1.3rem");
+	}
+	else {
+		$(".table").css("font-size", "1.4rem");
+	}
+	if ( w < 970) {
 		$("td[data-title='Name']").fadeOut("fast");
 		$("th[data-title='Name']").fadeOut("fast");
 	}
@@ -9,7 +15,7 @@ $( window ).resize(function() {
 		$("th[data-title='Name']").fadeIn("fast");
 	}
 
-	if ( w < 730) {
+	if ( w < 820) {
 		$("td[data-title='Info']").fadeOut("fast");
 		$("th[data-title='Info']").fadeOut("fast");
 	}
@@ -18,7 +24,7 @@ $( window ).resize(function() {
 		$("th[data-title='Info']").fadeIn("fast");
 	}
 
-	if ( w < 620) {
+	if ( w < 730) {
 		$("td[data-title='Plane']").fadeOut("fast");
 		$("th[data-title='Plane']").fadeOut("fast");
 	}
@@ -26,6 +32,8 @@ $( window ).resize(function() {
 		$("td[data-title='Plane']").fadeIn("fast");
 		$("th[data-title='Plane']").fadeIn("fast");
 	}
+
+	$(window).trigger('resize.stickyTableHeaders');
 });
 
 $(".control-buttons-arrival").click(function() {
@@ -60,24 +68,7 @@ $(".control-buttons-departure").click(function() {
 	reloadData();
 });
 
-$(".table-info").click(function() {
-	if ($(this).hasClass("active-l1")) {
-		$(".active-l2").fadeOut("fast", function(){
-			$(".active-l2").removeClass("active-l2");
-			$(".active-l1").removeClass("active-l1");
-		});
-	}
-	else {
-		$(".active-l2").fadeOut("fast");
-		$(".active-l1").removeClass("active-l1");
-		$(".active-l2").removeClass("active-l2");
-		$(this).addClass("active-l1");
-		$(this).next("tr").fadeIn("fast", function (){
-			$(this).addClass("active-l2");
-		});
-	}
-});
-
 $(function () {
     $("#table").stickyTableHeaders({fixedOffset: $('.top-container')});
+    reloadData();
 });

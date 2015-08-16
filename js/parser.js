@@ -1,36 +1,7 @@
-var t = '['+
-'{"type":"Вылет",'+
-'"number":"LH2999",'+
-'"name":"Lufthansa",'+
-'"logo":"http://aviakompaniya.info/sites/default/files/imagecache/icologobig/lufthansa_logo.png",'+
-'"plane":"Boeing 747-400",'+
-'"airport":"Москва",'+
-'"time":"10-00",'+
-'"status":"Посадка",'+
-'"info":"--"},'+
-'{"type":"Прилет",'+
-'"number":"LH2999",'+
-'"name":"Lufthansa",'+
-'"logo":"http://aviakompaniya.info/sites/default/files/imagecache/icologobig/s7.gif",'+
-'"plane":"Boeing 747-400",'+
-'"airport":"Москва",'+
-'"time":"10-00",'+
-'"status":"Посадка",'+
-'"info":"--"},'+
-'{"type":"Прилет",'+
-'"number":"LH2999",'+
-'"name":"Lufthansa",'+
-'"logo":"http://aviakompaniya.info/sites/default/files/imagecache/icologobig/singaporeair-logo.jpg",'+
-'"plane":"Boeing 747-400",'+
-'"airport":"Москва",'+
-'"time":"10-00",'+
-'"status":"Посадка",'+
-'"info":"--"}'+
-']';
 function reloadData()
 {
   $('#table tbody tr').remove();
-  var flights = $.parseJSON(t);
+  var flights = $.getJSON("data.json");
   var showArrival = $(".active-chechboxa").length === 1;
   var showDeparture = $(".active-chechboxd").length === 1;
   flights.forEach(function(f) {
@@ -52,6 +23,25 @@ function reloadData()
             <td colspan="7"></td> \
       </tr>');
   });
+
+  $(".table-info").click(function() {
+  if ($(this).hasClass("active-l1")) {
+    $(".active-l2").fadeOut("fast", function(){
+      $(".active-l2").removeClass("active-l2");
+      $(".active-l1").removeClass("active-l1");
+    });
+  }
+  else {
+    $(".active-l2").fadeOut("fast");
+    $(".active-l1").removeClass("active-l1");
+    $(".active-l2").removeClass("active-l2");
+    $(this).addClass("active-l1");
+    $(this).next("tr").fadeIn("fast", function (){
+      $(this).addClass("active-l2");
+    });
+  }
+});
+
 }
 // var flights = $.parseJSON(t);
 // flights.forEach(function(f) {

@@ -2,14 +2,6 @@
 	background: rgba(33, 150, 243, 0.07);;
 }
 
-.table-departure tbody > tr:nth-child(4n+1) {
-	background: rgba(33, 150, 243, 0.07);;
-}
-
-.departure {
-	display: none;
-}
-
 .add-info {
 	display: none;
 }
@@ -17,3 +9,8 @@
 .active-l1, .active-l2 {
     background-color: rgb(200, 238, 255) !important;
 }
+
+.tableFloatingHeader, .tableFloatingHeaderOriginal {
+    background-color: #FFFFFF;
+}
+

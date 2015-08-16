@@ -27,28 +27,12 @@
 	float: left;
 }
 
-.head-arrival {
-    text-transform: uppercase;
-    color: #FAFAFA;
-    font-size: 30px;
-    text-align: center;
-}
-
-.head-departure {
-	text-transform: uppercase;
-    color: #FAFAFA;
-    font-size: 30px;
-    text-align: center;
-	display: none;
-}
-
 .section-arrival {
     border-bottom: 2px solid #EEE;
     width: 80px;
     position: absolute;
     left: 40px;
     float: left;
-    display: none;
 }
 
 .section-departure {
