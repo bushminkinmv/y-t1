@@ -38,9 +38,10 @@ $(".control-buttons-arrival").click(function() {
 		$(".section-arrival").fadeIn("slow");	
 	}
 	
-	$(".departure").fadeOut("fast", function(){
-		$(".arrival").fadeIn("fast");
-	});
+	// $(".departure").fadeOut("fast", function(){
+	// 	$(".arrival").fadeIn("fast");
+	// });
+	reloadData();
 });
 
 $(".control-buttons-departure").click(function() {
@@ -53,9 +54,10 @@ $(".control-buttons-departure").click(function() {
 		$(".section-departure").fadeIn("slow");	
 	}
 
-	$(".arrival").fadeOut("fast", function(){
-		$(".departure").fadeIn("fast");
-	});
+	// $(".arrival").fadeOut("fast", function(){
+	// 	$(".departure").fadeIn("fast");
+	// });
+	reloadData();
 });
 
 $(".table-info").click(function() {
@@ -77,5 +79,5 @@ $(".table-info").click(function() {
 });
 
 $(function () {
-    $("#table").stickyTableHeaders();
+    $("#table").stickyTableHeaders({fixedOffset: $('.top-container')});
 });
