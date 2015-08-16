@@ -10,7 +10,7 @@ function reloadData()
               <td data-title="ID">'+f.type+'</td> \
               <td data-title="Number">'+f.number+'</td> \
               <td data-title="Name">'+f.name+'</td> \
-              <td data-title="Logo"><img height="30px" src="'+f.logo+'"></td> \
+              <td data-title="Logo"><img width="100px" src="'+f.logo+'"></td> \
               <td data-title="Plane">'+f.plane+'</td> \
               <td data-title="Airport">'+f.airport+'</td> \
               <td data-title="Time">'+f.time+'</td> \
